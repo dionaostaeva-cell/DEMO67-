@@ -233,17 +233,6 @@
   </div>
   <div id="subject-photo"></div>
   <div class="archive-grid" id="archive-grid"></div>
-  <div class="wall-block">
-    <div class="wall-title">▸ ОСТАВЬ СООБЩЕНИЕ В АРХИВЕ</div>
-    <div id="wall-form">
-      <input id="wall-name" maxlength="24" placeholder="ПОЗЫВНОЙ" autocomplete="off"/>
-      <textarea id="wall-text" maxlength="240" placeholder="ТВОЁ СООБЩЕНИЕ ОПЕРАТОРУ..."></textarea>
-      <button type="button" onclick="submitWallMessage()">ПЕРЕДАТЬ В АРХИВ</button>
-      <div class="wall-err hidden" id="wall-err"></div>
-    </div>
-    <div id="wall-done" class="hidden">✔ ТВОЙ СЛЕД ОСТАВЛЕН В АРХИВЕ</div>
-    <div class="wall-list" id="wall-list"></div>
-  </div>
   <button class="logout-btn" onclick="logout()">[ ВЫЙТИ ИЗ СИСТЕМЫ ]</button>
 </div>
 
@@ -418,7 +407,6 @@ function showAccess(){
   sc.classList.remove("hidden");sc.style.opacity="0";sc.style.transition="opacity .7s";
   requestAnimationFrame(()=>requestAnimationFrame(()=>{sc.style.opacity="1";}));
   startTimer();
-  renderWall();
 }
 
 function startTimer(){
